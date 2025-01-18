@@ -12,6 +12,7 @@ parentLogIn() {
   for (int i = 0; i < parentIdAndPassword.length; i++) {
     if (idNumber == parentIdAndPassword[i]["parentId"] &&
         password == parentIdAndPassword[i]["password"]) {
+      print('==============================');
       print("thanks for login");
       condition = '1';
 
@@ -69,10 +70,13 @@ parentsMenu() {
       print('==============================');
       parentsMenu();
     }
-  }
-  if (parentsMenuSelection == '*') {
+  } else if (parentsMenuSelection == '*') {
     print('successfully logout');
     print('==============================');
     mainMenu();
+  } else {
+    print('==============================');
+    print("enter correct key");
+    parentsMenu();
   }
 }
